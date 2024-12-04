@@ -1,6 +1,3 @@
-### Código em Python
-
-python
 class PecaAutomotiva:
     def __init__(self, nome, categoria, valor):
         self.nome = nome
