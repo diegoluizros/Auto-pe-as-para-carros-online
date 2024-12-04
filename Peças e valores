@@ -1,0 +1,37 @@
+### Código em Python
+
+python
+class PecaAutomotiva:
+    def __init__(self, nome, categoria, valor):
+        self.nome = nome
+        self.categoria = categoria
+        self.valor = valor
+
+    def __str__(self):
+        return f"{self.nome} - Categoria: {self.categoria} - Preço: R${self.valor:.2f}"
+
+
+class Estoque:
+    def __init__(self):
+        self.pecas = []
+
+    def adicionar_peca(self, peca):
+        self.pecas.append(peca)
+
+    def listar_pecas(self):
+        if not self.pecas:
+            print("Nenhuma peça disponível no estoque.")
+            return
+        print("Lista de Peças Automotivas:")
+        for peca in self.pecas:
+            print(peca)
+
+    def buscar_peca(self, nome):
+        for peca in self.pecas:
+            if peca.nome.lower() == nome.lower():
+                return peca
+        return None
+
+
+# Exemplo de uso
+estoque = Estoque()
