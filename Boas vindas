@@ -1,0 +1,22 @@
+print("")
+print("*   BEM-VINDO(A) À LOJA DE PEÇAS DE AUTO   *")
+print("")
+print("Aqui você encontra tudo para seu veículo!")
+print("------------------------------------------")
+print("1 - Explorar o catálogo de peças")
+print("2 - Buscar uma peça específica")
+print("3 - Sair")
+print("Digite o número da sua escolha:  ")
+
+escolha = int(input())
+
+if escolha == 1:
+    print("Explorando o catálogo...")
+    print("Categorias disponšíveis: ")
+    print("1 - Peças de motor")
+    print("2 - Freios e suspensão")
+    print("3 - Elétrica e iluminação")
+    print("Volte ao menu principal para mais opções.")
+elif escolha == 2:
+    print("Digite o nome ou código da peça que procura:  ")
+ 
