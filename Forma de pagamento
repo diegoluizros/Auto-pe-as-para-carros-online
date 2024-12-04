@@ -1,6 +1,3 @@
-### Código em Python
-
-python
 class Pagamento:
     def processar(self, valor):
         raise NotImplementedError("Este método deve ser implementado por subclasses.")
