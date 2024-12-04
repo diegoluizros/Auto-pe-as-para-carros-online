@@ -16,5 +16,5 @@ A autopeças online é um projeto de vendas de peças e acessórios automotivos 
 # Contato
 - Facebook: @lojaautopeças
 - Instagram: Loja Autopeças
-- email: Autopeçasonline@gmail.com
+- email: Autopeçaonline@gmail.com
 - número:(15)998258766
