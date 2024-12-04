@@ -4,7 +4,7 @@ A autopeças online é um projeto de vendas de peças e acessórios automotivos 
 # Objetivos de Autopeças
 -Facilitar o acesso de Peças: a autopeça proporciona aos consumidores um acesso rápido e fácil, oferece produto de qualidade e entrega no conforto de sua casa, imdependete da sua localização. Fornece uma plataforma intuitiva e amigavel, onde os clientes possam buscar e comprar produtos de forma eficiente. Tem como objetivo reduzir o custo, permitindo que os preços sejam acessíveis aos clientes.
 # funcionalidades
--Visualzar peças disponiveis.
--Adicionar e remover peças do carrinho.
+- Visualzar peças disponiveis.
+- Adicionar e remover peças do carrinho.
 -Finalizar compra.
 -Promoção para clientes cadastrados.
