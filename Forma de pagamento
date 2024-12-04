@@ -1,0 +1,70 @@
+### Código em Python
+
+python
+class Pagamento:
+    def processar(self, valor):
+        raise NotImplementedError("Este método deve ser implementado por subclasses.")
+
+
+class CartaoDeCredito(Pagamento):
+    def __init__(self, numero_cartao, nome_titular, validade, cvv):
+        self.numero_cartao = numero_cartao
+        self.nome_titular = nome_titular
+        self.validade = validade
+        self.cvv = cvv
+
+    def processar(self, valor):
+        print(f"Processando pagamento de R${valor:.2f} através do Cartão de Crédito.")
+        # Aqui você pode adicionar lógica para validar e processar o pagamento de forma segura
+        print("Pagamento processado com sucesso!")
+
+
+class Boleto(Pagamento):
+    def __init__(self, codigo_barras):
+        self.codigo_barras = codigo_barras
+
+    def processar(self, valor):
+        print(f"Gerando boleto no valor de R${valor:.2f}.")
+        print(f"Código de barras: {self.codigo_barras}")
+        print("Boleto gerado com sucesso! O pagamento será confirmado quando o boleto for pago.")
+
+
+class PayPal(Pagamento):
+    def __init__(self, email):
+        self.email = email
+
+    def processar(self, valor):
+        print(f"Processando pagamento de R${valor:.2f} através do PayPal.")
+        print(f"Email associado: {self.email}")
+        print("Pagamento processado com sucesso!")
+
+
+class SistemaDePagamento:
+    def __init__(self):
+        self.pagamentos = []
+
+    def adicionar_pagamento(self, pagamento):
+        self.pagamentos.append(pagamento)
+
+    def processar_pagamentos(self, valor):
+        for pagamento in self.pagamentos:
+            pagamento.processar(valor)
+
+
+# Exemplo de uso
+sistema_pagamento = SistemaDePagamento()
+
+# Adicionando diferentes formas de pagamento
+cartao = CartaoDeCredito("1234 5678 9012 3456", "João da Silva", "12/25", "123")
+boleto = Boleto("123456789012")
+paypal = PayPal("joao@example.com")
+
+sistema_pagamento.adicionar_pagamento(cartao)
+sistema_pagamento.adicionar_pagamento(boleto)
+sistema_pagamento.adicionar_pagamento(paypal)
+
+# Processando um pagamento
+valor_compra = 150.75
+sistema_pagamento.processar_pagamentos(valor_compra)
+
+
